@@ -207,6 +207,11 @@ html, body{
   margin-bottom:15px;
 }
 
+.menu a{
+  text-decoration: none;
+  color: transparent;
+}
+
 .menu button{
   margin-top: 20px;
   cursor: pointer;

@@ -3,6 +3,8 @@ import Carte_Boisson from "../pdf-cartes/Carte des boissons.pdf"
 import Carte_5temps from "../pdf-cartes/Au grès de la forêt.pdf"
 import Carte_3temps from "../pdf-cartes/Découverte forestière.pdf"
 
+import {Link} from 'react-router-dom';
+
 
 export default function CartesPage() {
 
