@@ -1,0 +1,589 @@
+@font-face {
+  font-family: Tropikal;
+  font-weight: bold;
+  src: url("fonts/tropikal-bold.otf") format("opentype");
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+:root {
+  font-family: Tropikal, serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  height: 100%;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root{
+  height:100%;
+  width: 100%;
+}
+
+.App{
+  height:100%;
+  width: 100%;
+}
+.Home{
+  display:flex;
+  flex-direction: column;
+  height:100%;
+  width: 100%;
+}
+
+.NavBar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Titre-NavBar{
+  margin: 0 0 0 50px;
+  font-size: 3em;
+  text-decoration: none;
+  color:white;
+}
+
+.Onglet-NavBar {
+  margin-right:30px;
+}
+
+.Onglet-NavBar > *{
+  margin-left:40px;
+  margin-right: 40px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.Button-Reservation-NavBar{
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.Button-Reservation-NavBar::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.Button-Reservation-NavBar:hover::before{
+  scale:3;
+}
+
+.Button-Reservation-NavBar:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.Button-Reservation-NavBar:active{
+  scale:1;
+}
+
+.Ecran-Principal{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image:url(images/background_avenue_arbres.jpg);
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.logo_noir{
+  display: flex;
+  width: 50%;
+}
+
+.other{
+  width: 50%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.other p{
+  margin:0;
+  font-size: 50px;
+  width: 600px;
+}
+
+.CartesPage{
+  display: flex;
+  flex-direction: column;
+}
+
+.Gros-titre{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:url("images/back_cartes.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20em;
+}
+
+.Gros-titre h1{
+  font-size: 7vw;
+}
+
+.description-produit{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 10em;
+  margin-bottom: 50px;
+}
+
+.description-produit p {
+  font-size: 27px;
+}
+
+.liste-cartes{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.line-cartes{
+  display:flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom:5vw;
+}
+
+.menu{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20vw;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding-bottom: 30px;
+}
+
+.menu h1{
+  margin:0;
+}
+
+.menu p{
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.menu button{
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  width: 50%;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.menu button::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.menu button:hover::before{
+  scale:6.5;
+}
+
+.menu button:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.menu button:active{
+  scale:1;
+}
+
+.Footer{
+  height: 7vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 60px;
+  padding-top:40px;
+}
+
+.Case-Footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.Footer-Title{
+  height: 50%;
+  font-size: 1.5em;
+  font-family: Tropikal, serif;
+  margin:0;
+  display: flex;
+  align-items: center;
+}
+
+.Footer-Text{
+  font-family: "Courier 10 Pitch", sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  height: 50%;
+  margin:0;
+}
+
+.Button-Footer{
+  background: none;
+  border: none;
+  position: relative;
+  font-family: "Courier 10 Pitch", sans-serif;
+  font-size: 1em;
+  margin-bottom: 1px; /* Espace pour la ligne en dessous */
+  cursor: pointer;
+  transition: color 0.3s; /* Animation lors du survol */
+  height: 50%;
+}
+
+.Button-Footer:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(193, 163, 98); /* Couleur de la ligne */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s; /* Animation de la largeur */
+}
+
+.Button-Footer:hover::after{
+  width: 0;
+}
+
+.ProducteursPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Gros-titre-Producteurs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:url("images/image-producteur.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20em;
+  width: 100%;
+}
+
+.Gros-titre-Producteurs h1{
+  font-size: 7vw;
+}
+
+.bloc-text-prod-1 {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.image-prod-gaec {
+  background-image: url("images/GAEC.jpeg");
+  width: 300px; /* Modifier la largeur selon votre besoin */
+  height: 250px; /* Modifier la hauteur selon votre besoin */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0; /* Empêcher le rétrécissement de l'image */
+  margin-right: 20px; /* Espacement entre l'image et le texte */
+}
+
+.image-prod-anais {
+  background-image: url("images/anais.jpg");
+  width: 300px; /* Modifier la largeur selon votre besoin */
+  height: 250px; /* Modifier la hauteur selon votre besoin */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0; /* Empêcher le rétrécissement de l'image */
+  margin-right: 20px; /* Espacement entre l'image et le texte */
+}
+
+.image-prod-palais {
+  background-image: url("images/palais fermier .jpeg");
+  width: 300px; /* Modifier la largeur selon votre besoin */
+  height: 250px; /* Modifier la hauteur selon votre besoin */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0; /* Empêcher le rétrécissement de l'image */
+  margin-right: 20px; /* Espacement entre l'image et le texte */
+}
+
+.image-prod-ferme {
+  background-image: url("images/Ferme de la marque.jpeg");
+  width: 300px; /* Modifier la largeur selon votre besoin */
+  height: 250px; /* Modifier la hauteur selon votre besoin */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0; /* Empêcher le rétrécissement de l'image */
+  margin-right: 20px; /* Espacement entre l'image et le texte */
+}
+
+.text-content {
+  flex-grow: 1;
+  margin-left:20px;
+  margin-right: 20px;
+}
+
+.text-content h1,
+.text-content p {
+  margin: 0;
+}
+
+.column-equipe{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 100%;
+}
+
+.line-equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100% ;
+  margin-top:100px;
+}
+
+.line-equipe-align{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 70%;
+  margin-top:100px;
+  margin-bottom:100px;
+}
+
+.card-container {
+  position: relative;
+  height: 600px;
+  width: 400px;
+}
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+.card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0.7s ease;
+  transform-style: preserve-3d;
+}
+.card-front-lea {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/photo-lea.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+}
+
+.card-front-romain{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/photo-romain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+}
+
+.card-front-nathan{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/image-nathan.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+}
+
+.card-front-ikram{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/image-ikram.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+}
+
+.card-front-lucie{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/image-lucie.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #556B2F;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nom-equipier{
+
+}
+
+.petit-titre-equipier{
+  text-align: center;
+  margin-bottom:0;
+}
+
+.p-equipier{
+  text-align: justify;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.ligne-deco{
+  width: 3px;
+  height: auto;
+  background-color:  rgb(193, 163, 98);
+}
+
+.Contact{
+  height: 100%;
+}
+.ContactPage{
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-gauche{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-image-droite{
+  background-color: green;
+  background-image: url("images/image-lac-contact.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 40%;
+}
+
+.div-contact p{
+  font-family: "Courier 10 Pitch", sans-serif;;
+}
+
+.div-contact ul li a{
+  text-decoration: none;
+  color:white;
+}
+.div-contact ul li {
+  margin-top:10px;
+  display: flex;
+  align-items: center;
+}
+
+.big-div-contact{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.titre-contact{
+  color:rgb(193, 163, 98);
+}
+
+.barre-contact{
+  height: 3px;
+  width: auto;
+  background-color: rgb(193, 163, 98);
+}
+
+.icon-insta{
+  height: 20px;
+  margin-left:10px;
+}
