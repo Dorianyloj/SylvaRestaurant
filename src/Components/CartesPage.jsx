@@ -1,3 +1,8 @@
+import Carte_Midi from "../pdf-cartes/Carte.pdf"
+import Carte_Boisson from "../pdf-cartes/Carte des boissons.pdf"
+import Carte_5temps from "../pdf-cartes/Au grès de la forêt.pdf"
+import Carte_3temps from "../pdf-cartes/Découverte forestière.pdf"
+
 
 export default function CartesPage() {
 
@@ -18,26 +23,54 @@ export default function CartesPage() {
                             <h1>Offre du midi</h1>
                             <p>Carte</p>
                             <p>Menu enfant</p>
+                            <a
+                                href={Carte_Midi}
+                                download="Carte_du_midi_Sylva"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                             <button>Télécharger</button>
+                            </a>
                         </div>
                         <div className="menu">
                             <h1>Boissons</h1>
-                            <button>Télécharger</button>
+                            <a
+                                href={Carte_Boisson}
+                                download="Carte_boissons_Sylva"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button>Télécharger</button>
+                            </a>
                         </div>
                     </div>
-                    <h1 style={{marginBottom:30}}>Offres du soir</h1>
+                    <h1 style={{marginBottom: 30}}>Offres du soir</h1>
                     <div className="line-cartes">
                         <div className="menu">
                             <h1>Au grès de la forêt</h1>
                             <p>5 temps</p>
                             <p>58€</p>
-                            <button>Télécharger</button>
+                            <a
+                                href={Carte_5temps}
+                                download="Carte_Grès_de_la_forêt_Sylva"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button>Télécharger</button>
+                            </a>
                         </div>
                         <div className="menu">
                             <h1>Découverte forestière</h1>
                             <p>3 temps</p>
                             <p>39€</p>
-                            <button>Télécharger</button>
+                            <a
+                                href={Carte_3temps}
+                                download="Carte_3_Temps_Sylva"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button>Télécharger</button>
+                            </a>
                         </div>
                     </div>
                 </div>
