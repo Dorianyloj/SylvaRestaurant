@@ -23,11 +23,18 @@ export default function ContactPage() {
                         <div className="div-contact">
                             <h1 className="titre-contact">Contact</h1>
                             <ul>
-                                <li><a href="tel:03 72 20 92 84">03 72 20 92 84</a></li>
-                                <li>Sylva.restaurant@gmail.com</li>
-                                <li><a href="https://www.instagram.com/sylvarestaurant/">SylvaRestaurant</a><img className="icon-insta"
+                                <li><a href="tel:03 72 20 92 84">03 72 20 92 84</a><img className="icon-insta"
+                                                                                        src="https://i.ibb.co/PhydpdS/phone.png"
+                                                                                        alt="Sylva Restaurant"/></li>
+                                <li><a href="mailto:Sylva.restaurant@gmail.com">Sylva.restaurant@gmail.com</a><img
+                                    className="icon-insta"
+                                    src="https://i.ibb.co/4dZqYQZ/envelope.png" alt="Sylva Restaurant"/></li>
+                                <li><a href="https://www.instagram.com/sylvarestaurant/">SylvaRestaurant</a><img
+                                    className="icon-insta"
                                     src="https://i.ibb.co/mS5RJfD/instagram.png" alt="Sylva Restaurant"/></li>
-                                <li>carrieresylva@gmail.com</li>
+                                <li><a href="mailto:carrieresylva@gmail.com">carrieresylva@gmail.com</a><img className="icon-insta"
+                                                                                      src="https://i.ibb.co/Pzjywr8/job.png"
+                                                                                      alt="Sylva Restaurant"/></li>
                             </ul>
                         </div>
                     </div>

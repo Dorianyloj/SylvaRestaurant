@@ -31,7 +31,7 @@ export default function NavBar() {
                 <Link to="/" className="Titre-NavBar">Sylva</Link>
                 <div className="Onglet-NavBar">
                     <a href="/cartes">Cartes</a>
-                    <a href="/equipe">Equipe</a>
+                    <a href="/equipe">Équipe</a>
                     <a href="/producteurs">Producteurs</a>
                     <a href="/contact">Contact</a>
                     <button className="Button-Reservation-NavBar">Reservation</button>
